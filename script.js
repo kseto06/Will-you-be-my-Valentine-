@@ -80,3 +80,11 @@ function handleNoClick() {
 function handleYesClick() {
     window.location.href = "yes_page.html";
 }
+
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey || event.metaKey) {
+        if (event.key === '+' || event.key === '-' || event.key === '0' || event.key === '=') {
+            event.preventDefault();
+        }
+    }
+});
